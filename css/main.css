@@ -263,7 +263,7 @@ body {
   position: relative;
   min-width: 360px;
   overflow-x: hidden !important;
-  font: normal 400 1.6rem/1.6 "Poppins", sans-serif;
+  font: normal 400 1.6rem/1.2 "Poppins", sans-serif;
   color: #000000;
   background-color: #000000;
 }
