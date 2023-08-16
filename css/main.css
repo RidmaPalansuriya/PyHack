@@ -4639,15 +4639,14 @@ Count
 /* FAQ */
 :root{
   --principal-font: 'Kumbh Sans', sans-serif;
-  --font-size: 12px;
+  --font-size: 20px;
 
-  --bg-gradient: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-
+  
   --primary-dark-color: hsl(0, 0%, 100%);
   --primary-soft-color: hsl(84, 100%, 50%);
 
   --neutral-dark-color: hsl(0, 0%, 100%);
-  --neutral-soft-color: hsl(0, 0%, 100%);
+  --neutral-soft-color: hsl(0, 0%, 0%);
 
 }
 
@@ -4657,22 +4656,6 @@ html {
 }
 * {box-sizing: inherit;}
 
-.attribution { 
-  font-size: 11px; text-align: center; 
-  background-color: hsl(240, 5%, 91%);
-  padding: 8px 0 5px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-
-/* delete this part */
-.attribution a { color: hsla(116, 100%, 45%, 0.911); }
-
-/* global */
-/*================================================*/
 
 
 body {
@@ -4715,7 +4698,7 @@ h2 {
 
 .faq-card {
 
-  background-color: #ffffff56;
+  background-color: #ffffff2c;
   border-radius: 20px;
 
   max-width: 310px;
@@ -4760,7 +4743,7 @@ h2 {
 
 .faq-accordion {
   padding: 8px 0;
-  border-bottom: 1px solid hsla(240, 4%, 91%, 0.32);
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.624);
 }
 
 
@@ -4780,7 +4763,7 @@ input.tgg-title {
 }
 
 .faq-accordion-title h2{
-  font-size: 12px /*var(--font-size)*/;
+  font-size: 16px /*var(--font-size)*/;
   font-weight: 400;
   color: var(--neutral-dark-color);
 }
@@ -4826,7 +4809,7 @@ input.tgg-title {
 
 .faq-accordion .tgg-title:checked ~ .faq-accordion-content{
   will-change: max-height;
-  max-height: 80px;
+  max-height: 160px;
 }
 
 /* p .faq-accordion{
