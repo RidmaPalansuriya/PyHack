@@ -1,176 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-      </div>
-      <style>@mixin sp-layout {
-        @media screen and (max-width: 750px) {
-          @content;
-        }
-      }
-      
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-         background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-        overflow: hidden;
-      }
-      
-      @function random_range($min, $max) {
-        $rand: random();
-        $random_range: $min + floor($rand * (($max - $min) + 1));
-        @return $random_range;
-      }
-      
-      .stars {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120%;
-        transform: rotate(-45deg);
-      }
-      
-      .star {
-        $star-count: 50;
-        --star-color: var(--primary-color);
-        --star-tail-length: 6em;
-        --star-tail-height: 2px;
-        --star-width: calc(var(--star-tail-length) / 6);
-        --fall-duration: 9s;
-        --tail-fade-duration: var(--fall-duration);
-      
-        position: absolute;
-        top: var(--top-offset);
-        left: 0;
-        width: var(--star-tail-length);
-        height: var(--star-tail-height);
-        color: var(--star-color);
-        background: linear-gradient(45deg, currentColor, transparent);
-        border-radius: 50%;
-        filter: drop-shadow(0 0 6px currentColor);
-        transform: translate3d(104em, 0, 0);
-        animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-        
-        @include sp-layout {
-          // For mobile performance, tail-fade animation will be removed QAQ
-          animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
-        }
-      
-        @for $i from 1 through $star-count {
-          &:nth-child(#{$i}) {
-            --star-tail-length: #{random_range(500em, 750em) / 100};
-            --top-offset: #{random_range(0vh, 10000vh) / 100};
-            --fall-duration: #{random_range(6000, 12000s) / 1000};
-            --fall-delay: #{random_range(0, 10000s) / 1000};
-          }
-        }
-      
-        &::before, &::after {
-          position: absolute;
-          content: '';
-          top: 0;
-          left: calc(var(--star-width) / -2);
-          width: var(--star-width);
-          height: 100%;
-          background: linear-gradient(45deg, transparent, currentColor, transparent);
-          border-radius: inherit;
-          animation: blink 2s linear infinite;
-        }
-      
-        &::before {
-          transform: rotate(45deg);
-        }
-      
-        &::after {
-          transform: rotate(-45deg);
-        }
-      }
-      
-      @keyframes fall {
-        to {
-          transform: translate3d(-30em, 0, 0);
-        }
-      }
-      
-      @keyframes tail-fade {
-        0%, 50% {
-          width: var(--star-tail-length);
-          opacity: 1;
-        }
-      
-        70%, 80% {
-          width: 0;
-          opacity: 0.4;
-        }
-      
-        100% {
-          width: 0;
-          opacity: 0;
-        }
-      }
-      
-      @keyframes blink {
-        50% {
-          opacity: 0.6;
-        }
-      }</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<div class="profile-circle">
+    <img src="img/PyHack Logos/Kimali-Kimali-Abeynayaka-q6s5h7ll2c13gdei7y5ot8qb151naxjnd00uiefioo.jpg" alt="" class="profile-image" id="profile-image"/>
+    <div class="profile-overlay" id="mouse-over">
+        <a href=""> </a>
+        <br/>
+        <span>  </span>
+        <br/>
+        <a href="" class="fa fa-facebook"></a>
+        <a href="" class="fa fa-twitter"></a>
+        <a href="" class="fa fa-google"></a>
+        <p class="role-name">Project Chair - PYHACK 2.0</p>
+        <p class="full-name">Kimali Abeynayaka</p>
+        <p class="cont-number"> Contact Number: +94 77 472 4528</p>
+    </div>
+</div>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Changa');
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Changa', sans-serif;
+     background: linear-gradient(to right, #36d1dc, #5b86e5);
+     min-height: 1px;
+}
+.role-name {
+  color: #84ff00;
+}
+
+.full-name{
+  color: #fff;
+}
+.cont-number{
+  color: #fff;
+}
+ .profile-circle {
+     position: absolute;
+     width: 200px;
+     height: 200px;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -60%);
+     border-radius: 100%;
+}
+ .profile-circle > img {
+     width: 300px;
+     height: 300px;
+     border-radius: 100%;
+     position:absolute;
+}
+ .profile-overlay {
+     background: rgba(0,0,0,0.8);
+     position: absolute;
+     width: 300px;
+     height: 300px;
+     border-radius: 100%;
+     text-align: center;
+     transition: .95s ease;
+     opacity: 0;
+}
+ #mouse-over:hover {
+     opacity: 1;
+     transition:all 1.2s ease;
+}
+ .profile-overlay > a:nth-child(1){
+     color: #fff;
+     position: absolute;
+     left: 15%;
+     top: 25%;
+     font-weight: 500;
+     font-size: 27px;
+     font-style: oblique;
+     text-decoration: none;
+}
+ .profile-overlay > span:nth-child(3){
+     color: #c4bebe;
+     position: absolute;
+     left: 40%;
+     top: 45%;
+     font-weight: 500;
+     font-size: 24px;
+     font-style: oblique;
+}
+ .profile-overlay > a:nth-child(5){
+     position: absolute;
+     background: #f3f3f3;
+     width:50px;
+     height: 50px;
+     line-height: 55px;
+     border-radius: 100%;
+     color: #212121;
+     text-decoration: none;
+     font-size: 20px;
+     bottom: 50px;
+     left: 195px;
+}
+ .profile-overlay > a:nth-child(5):hover {
+     background: #3b5998;
+     color: #fff;
+}
+ .profile-overlay > a:nth-child(6){
+     position: absolute;
+     background: #f3f3f3;
+     width:50px;
+     height: 50px;
+     line-height: 55px;
+     border-radius: 100%;
+     color: #212121;
+     text-decoration: none;
+     font-size: 20px;
+     bottom: 50px;
+     left: 130px;
+}
+ .profile-overlay > a:nth-child(6):hover {
+     background: #21f21d62;
+     color: #fff;
+}
+ .profile-overlay > a:nth-child(7){
+     position: absolute;
+     background: #f3f3f3;
+     width:50px;
+     height: 50px;
+     line-height: 55px;
+     border-radius: 100%;
+     color: #212121;
+     text-decoration: none;
+     font-size: 20px;
+     bottom: 50px;
+     left: 65px;
+}
+ .profile-overlay > a:nth-child(7):hover {
+     background: #db4437;
+     color: #fff;
+}
+
+</style>
+<script>
+  $(document).ready(function(){
+    $("#profile-image").click(function(){
+        $("#mouse-over").fadeIn();
+    });
+});
+</script>
 </body>
 </html>
